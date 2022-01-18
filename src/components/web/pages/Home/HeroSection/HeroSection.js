@@ -1,6 +1,8 @@
 import React from "react";
 import background from "../../../../../assets/img/hero-bg-3.jpg";
 
+import "./HeroSection.css";
+
 function HeroSection() {
   return (
     <>

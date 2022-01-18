@@ -1,6 +1,11 @@
 import React from "react";
+import "./Header.css";
 
 function Header() {
+  let isAuthenticated = sessionStorage.getItem("Is-Authenticated");
+
+  const user_name = sessionStorage.getItem("Registration-Name").replace(/"/g, "");
+
   return (
     <>
       <header id="header" className="fixed-top" style={{ background: "black" }}>
@@ -39,16 +44,27 @@ function Header() {
                   Contact
                 </a>
               </li>
-              <li>
-                <a className="nav-link scrollto" href="/login">
-                  Login
-                </a>
-              </li>
-              <li>
-                <a className="nav-link scrollto" href="/register">
-                  Register
-                </a>
-              </li>
+
+              {isAuthenticated === "true" ? (
+                <li>
+                  <a className="nav-link scrollto" href="/">
+                    Hello, {user_name}
+                  </a>
+                </li>
+              ) : (
+                <>
+                  <li>
+                    <a className="nav-link scrollto" href="/login">
+                      Login
+                    </a>
+                  </li>
+                  <li>
+                    <a className="nav-link scrollto" href="/register">
+                      Register
+                    </a>
+                  </li>
+                </>
+              )}
             </ul>
             <i className="bi bi-list mobile-nav-toggle" />
           </nav>

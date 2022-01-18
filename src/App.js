@@ -3,6 +3,8 @@ import Footer from "./components/web/layout/footer/Footer";
 import Header from "./components/web/layout/header/Header";
 import Home from "./components/web/pages/Home/Home";
 
+import "./assets/css/style.css";
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./components/web/pages/Login/Login";
 import Register from "./components/web/pages/Register/Register";

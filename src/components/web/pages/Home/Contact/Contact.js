@@ -1,5 +1,6 @@
 import React from "react";
 import background from "../../../../../assets/img/overlay-bg.jpg";
+import "./Contact.css";
 
 function Contact() {
   return (
