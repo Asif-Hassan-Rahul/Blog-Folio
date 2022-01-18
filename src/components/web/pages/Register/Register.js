@@ -22,10 +22,7 @@ function Register() {
       localStorage.setItem("Registration-Email", JSON.stringify(email));
       localStorage.setItem("Registration-Name", JSON.stringify(name));
       localStorage.setItem("Registration-Password", JSON.stringify(password));
-
-      sessionStorage.setItem("Registration-Email", JSON.stringify(email));
-      sessionStorage.setItem("Registration-Name", JSON.stringify(name));
-      sessionStorage.setItem("Registration-Password", JSON.stringify(password));
+      localStorage.setItem("Is-Logged-In", JSON.stringify(true));
 
       console.log("Saved in Local Storage");
 

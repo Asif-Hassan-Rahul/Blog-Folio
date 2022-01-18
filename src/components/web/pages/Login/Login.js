@@ -25,7 +25,7 @@ function Login() {
       setIsAuthenticated(!isAuthenticated);
       setFlag(false);
 
-      sessionStorage.setItem("Is-Authenticated", JSON.stringify(true));
+      localStorage.setItem("Is-Logged-In", JSON.stringify(true));
 
       setRedirect(!redirect);
     }

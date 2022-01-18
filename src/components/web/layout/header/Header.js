@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.css";
+import LoginButton from "./LoginButton";
 
 function Header() {
-  let isAuthenticated = sessionStorage.getItem("Is-Authenticated");
+  const isAuthenticated = localStorage.getItem("Is-Logged-In").replace(/"/g, "") === "true";
 
-  const user_name = sessionStorage.getItem("Registration-Name").replace(/"/g, "");
+  const user_name = localStorage.getItem("Registration-Name").replace(/"/g, "");
 
   return (
     <>
@@ -45,25 +46,14 @@ function Header() {
                 </a>
               </li>
 
-              {isAuthenticated === "true" ? (
+              {isAuthenticated ? (
                 <li>
                   <a className="nav-link scrollto" href="/">
-                    Hello, {user_name}
+                    Hello, <strong> {user_name} </strong>
                   </a>
                 </li>
               ) : (
-                <>
-                  <li>
-                    <a className="nav-link scrollto" href="/login">
-                      Login
-                    </a>
-                  </li>
-                  <li>
-                    <a className="nav-link scrollto" href="/register">
-                      Register
-                    </a>
-                  </li>
-                </>
+                <LoginButton />
               )}
             </ul>
             <i className="bi bi-list mobile-nav-toggle" />
