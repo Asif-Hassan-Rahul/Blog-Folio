@@ -1,0 +1,17 @@
+#header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#content {
+    padding: 50px 350px;
+}
+
+form{
+    width: 100%;
+}
+
+footer{
+    display: none;
+}

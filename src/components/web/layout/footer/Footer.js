@@ -5,7 +5,7 @@ function Footer() {
   return (
     <>
       {/* ======= Footer ======= */}
-      <footer>
+      <footer id="footer">
         <div className="container">
           <div className="row">
             <div className="col-sm-12">
