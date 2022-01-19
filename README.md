@@ -1,7 +1,7 @@
 # Commands to run the project
   1. npm install
   2. npm start
-  3. npx json-server --watch data/db.json --port 8000 (to run the json-server for blog)
+  3. npx json-server --watch data/db.json --port 8000 (You have to run this command on a different terminal to run the json-server for blog)
 
 
 
