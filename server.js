@@ -13,6 +13,14 @@ server.use(
   })
 );
 
+const express = require('express');
+const path = require('path');
+
+server.use(express.static(path.join(__dirname, 'build')));
+server.get('/*', function (req, res) {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
 server.use(router);
 server.listen(port, () => {
   console.log(`Server is running on ${port} `);
