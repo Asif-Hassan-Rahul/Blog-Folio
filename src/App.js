@@ -18,12 +18,12 @@ function App() {
       <Header />
       <Router>
         <Routes>
-          <Route path="/" exact element={<Home />} />
-          <Route path="/login" exact element={<Login />} />
-          <Route path="/register" exact element={<Register />} />
-          <Route path="/blog" exact element={<Blog/>} />
-          <Route path="/dashboard" exact element={<Dashboard/>} />
-          <Route path="/update/:id" exact element={<Update/>} />
+          <Route path="/Blog-Folio/" exact element={<Home />} />
+          <Route path="/Blog-Folio/login" exact element={<Login />} />
+          <Route path="/Blog-Folio/register" exact element={<Register />} />
+          <Route path="/Blog-Folio/blog" exact element={<Blog/>} />
+          <Route path="/Blog-Folio/dashboard" exact element={<Dashboard/>} />
+          <Route path="/Blog-Folio/update/:id" exact element={<Update/>} />
         </Routes>
       </Router>
       <Footer />
